@@ -1,0 +1,57 @@
+
+<style type="text/css">
+.form-table ul {
+  list-style:none;
+  padding:0;
+  padding-left: 2em;
+}
+.form-table ul li {
+  margin-right:0;
+}
+</style>
+
+
+<div class="wrap">
+<div id="poststuff">
+{SAVED}
+<h2>User Cats Manager</h2>
+<form action="{ACTION}" method="POST" class="postbox">
+  <h3><label for="ucm_users">
+    {SELECT_USER}
+  </label></h3>
+  <div class="inside">
+    <select name="user" id="ucm_users">{USERS}</select>
+    <button type="submit" name="submit" class="button" value="{EDIT}">{EDIT}</button>
+  </div>
+</form>
+
+{POST}
+
+<form action="{ACTION}" method="POST">
+  <h2>{EDITING}</h2>
+  <div id="message" class="updated fade"><p>{MESSAGE_DEFAULT_CATS}</p></div>
+  <input type="hidden" name="nick" value="{NICK}"  />
+
+
+  <table class="form-table">
+    <tbody>
+      <tr valign="top">
+        <th>{LEGEND}</th>
+        <td scope="row">
+          {ALL_CATS}
+        </td>
+      </tr>
+      <tr valign="top">
+        <th>{LEGEND_BM}</th>
+        <td scope="row">
+          {ALL_CATS_BM}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="submit"><button type="submit" name="submit" value="{SAVE}" class="button">{SAVE}</button></p>
+</form>
+{/POST}
+</div>
+</div>
